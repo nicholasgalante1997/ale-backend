@@ -10,6 +10,12 @@ class Api::V1::UserBooksController < ApplicationController
         render json: userbook
     end 
 
+    def update
+        userbook = UserBook.find(params[:id])
+        userbook.update!(user_book_params)
+        render json: userbook
+    end
+
     def destroy
         userbook = UserBook.find(params[:id])
         userbook.destroy!
