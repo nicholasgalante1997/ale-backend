@@ -5,8 +5,6 @@ class Api::V1::UserBooksController < ApplicationController
         render json: userbooks 
     end 
 
-    def new 
-
     def create
         userbook = UserBook.create!(user_book_params)
         render json: userbook
