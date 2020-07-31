@@ -2,7 +2,7 @@ class Api::V1::UserBooksController < ApplicationController
 
     def index  
         userbooks = UserBook.all 
-        render json: userbooks 
+        render json: userbooks, include: :comments
     end 
 
     def create
