@@ -4,7 +4,6 @@ Rails.application.routes.draw do
     namespace :v1 do 
       resources :users
       resources :books
-      # get 'books/:isbn', to: "books#show"
       resources :user_books 
       resources :comments
     end 
